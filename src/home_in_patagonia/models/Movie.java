@@ -18,6 +18,15 @@ public class Movie {
         this.genero = genero;
     }
 
+    public Movie(String titulo, String director, Integer año, Integer duracion, String genero) {
+        this.titulo = titulo;
+        this.director = director;
+        this.año = año;
+        this.duracion = duracion;
+        this.genero = genero;
+    }
+    
+    
     public Integer getIdMovie() {
         return idMovie;
     }

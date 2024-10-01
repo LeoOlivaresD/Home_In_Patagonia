@@ -27,8 +27,7 @@ public class VistaListarMovies extends javax.swing.JFrame {
     public VistaListarMovies(MovieController movieController) {
         initComponents();
         this.movieController = movieController;
-
-        List<Movie> movies = movieController.getMovieFromDB();
+        List<Movie> movies = movieController.getMovieFromDB(); //Cargo las peliculas de la bd al inicar la 
 
         //Determino la manera en la que se mostraran los datos en la tabla
         String[] columnNames = {"Id", "Titulo", "Director", "Año", "Duracion", "Genero"};
@@ -61,7 +60,7 @@ public class VistaListarMovies extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -74,6 +73,8 @@ public class VistaListarMovies extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setAlignmentX(1.0F);
+        jTable1.setAlignmentY(1.0F);
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
